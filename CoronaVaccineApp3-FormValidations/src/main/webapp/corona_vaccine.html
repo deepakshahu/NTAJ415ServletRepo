@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corona Vaccine Eligibility Checking</title>
+</head>
+<body>
+	<h1 style="color: red; text-align: center">Corona Vaccine
+		Eligibility Checking</h1>
+	<form action="coronaurl" method="POST" onsubmit="return validate(this)">
+		<table border="1" align="center" bgcolor="cyan">
+			<tr>
+				<td>&nbsp;Person Name* :</td>
+				<td><input type="text" name="pname"><span id="pnameErr"
+					style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Person Address* :</td>
+				<td><input type="text" name="paddrs"><span
+					id="paddrsErr" style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Person Age* :</td>
+				<td><input type="text" name="page"><span id="pageErr"
+					style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Check Vaccine Eligibility"></td>
+				<td><input type="reset" value="cancel"></td>
+			</tr>
+		</table>
+		<input type="hidden" name="vflag" value="no"/>
+	</form>
+	<br>
+	<br>
+	<h1>
+		<a href="coronaurl">GetWishMessage</a>
+	</h1>
+</body>
+</html>
+
+<script language="JavaScript" src="js/validations.js"></script>

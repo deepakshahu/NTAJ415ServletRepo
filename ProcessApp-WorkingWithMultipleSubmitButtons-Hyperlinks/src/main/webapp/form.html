@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ProcessApp-Working With Multiple Submit
+	Buttons-Hyperlinks</title>
+</head>
+<body>
+	<h1 style="color: red; text-align: center">ProcessApp-Working With
+		Multiple Submit Buttons - Hyperlinks</h1>
+	<form action="processurl" method="POST" bgcolor="blue">
+		<table border="1" align="center" bgcolor="cyan">
+			<tr>
+				<td>&nbsp;Enter Value 1* :</td>
+				<td><input type="text" name="value1"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Enter Value 2* :</td>
+				<td><input type="text" name="value2"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="add" name="s1"></td>
+				<td><input type="submit" value="sub" name="s1"></td>
+				<td><a href="processurl?s1=link1">Get System Properties</a></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="mul" name="s1"></td>
+				<td><input type="submit" value="div" name="s1"></td>
+				<td><a href="processurl?s1=link2">Get System Date and Time</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

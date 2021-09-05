@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML to Servlet communication using Java script</title>
+</head>
+<body>
+	<h1 style="color: red; text-align: center">HTML to Servlet
+		communication using Java script</h1>
+	<form name="frm" action="capitalurl" method="GET">
+		Select country : <select name="country" onchange="frm.submit()">
+			<option value="-1" selected>select--value</option>
+			<option value="0">India</option>
+			<option value="1">Pakistan</option>
+			<option value="2">USA</option>
+			<option value="3">China</option>
+		</select>
+	</form>
+
+	<!-- <script language="Javascript">
+		function send() {
+			frm.submit();  //Submits the request to action url
+		}
+	</script> -->
+</body>
+</html>
