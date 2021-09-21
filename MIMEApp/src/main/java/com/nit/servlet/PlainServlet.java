@@ -6,8 +6,22 @@ import javax.servlet.http.*;
 import java.io.*;
 
 public class PlainServlet extends HttpServlet{
+	
+	static {
+		System.out.println("PlainServlet :: static block");
+	}
+	
+	public PlainServlet() {
+		System.out.println("PlainServlet :: 0-param constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("PlainServlet :: init(ServletConfig cg)");
+	}
+	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-		
+		System.out.println("PlainServlet:: service(req,res)");
 		//Set response content type
 		res.setContentType("text/plain");
 		

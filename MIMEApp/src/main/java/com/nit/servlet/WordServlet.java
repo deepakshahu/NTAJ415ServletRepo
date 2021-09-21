@@ -6,8 +6,22 @@ import javax.servlet.http.*;
 import java.io.*;
 
 public class WordServlet extends HttpServlet{
+	
+	static {
+		System.out.println("WordServlet :: static block");
+	}
+	
+	public WordServlet() {
+		System.out.println("WordServlet :: 0-param constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("WordServlet :: init(ServletConfig cg)");
+	}
+	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-		
+		System.out.println("WordServlet:: service(req,res)");
 		//Set response content type
 		res.setContentType("application/msword");
 		

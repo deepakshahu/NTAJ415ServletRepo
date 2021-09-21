@@ -6,8 +6,22 @@ import javax.servlet.http.*;
 import java.io.*;
 
 public class HtmlServlet extends HttpServlet{
+	
+	static {
+		System.out.println("HtmlServlet :: static block");
+	}
+	
+	public HtmlServlet() {
+		System.out.println("HtmlServlet :: 0-param constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("HtmlServlet :: init(ServletConfig cg)");
+	}
+	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-		
+		System.out.println("HtmlServlet:: service(req,res)");
 		//Set response content type
 		res.setContentType("text/html");
 		

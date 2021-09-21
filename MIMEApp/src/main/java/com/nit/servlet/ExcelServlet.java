@@ -6,8 +6,22 @@ import javax.servlet.http.*;
 import java.io.*;
 
 public class ExcelServlet extends HttpServlet{
+	
+	static {
+		System.out.println("ExcelServlet :: static block");
+	}
+	
+	public ExcelServlet() {
+		System.out.println("ExcelServlet :: 0-param constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("ExcelServlet :: init(ServletConfig cg)");
+	}
+	
 	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-		
+		System.out.println("ExcelServlet:: service(req,res)");
 		//Set response content type
 		res.setContentType("application/vnd.ms-excel");
 		
