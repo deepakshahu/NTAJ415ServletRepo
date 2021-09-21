@@ -17,7 +17,7 @@ public class WishMessageServlet extends HttpServlet {
 		//Get PrintWriter
 		PrintWriter pw = res.getWriter();
 		
-		//Set resposne content type
+		//Set response content type
 		res.setContentType("text/html");
 		
 		//Write b.logic to generate the wish message
