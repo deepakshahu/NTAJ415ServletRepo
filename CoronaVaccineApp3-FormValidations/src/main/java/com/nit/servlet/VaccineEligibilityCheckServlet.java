@@ -28,11 +28,11 @@ public class VaccineEligibilityCheckServlet extends HttpServlet {
 		String name = req.getParameter("pname");
 		String addrs = req.getParameter("paddrs");
 		String tage = req.getParameter("page");
-		String csvStatus = req.getParameter("vflag");
-		System.out.println(name+" "+addrs+" "+tage+" "+csvStatus);
+		//String csvStatus = req.getParameter("vflag");
+		System.out.println(name+" "+addrs+" "+tage);//+" "+csvStatus);
 		
 		int age=0;
-		if(csvStatus.equalsIgnoreCase("no")) {		
+		//if(csvStatus.equalsIgnoreCase("no")) {		
 			//Form validation logics(Server side)
 			System.out.println("Server side form validations");
 			List<String> errorsList=new ArrayList();
@@ -64,8 +64,8 @@ public class VaccineEligibilityCheckServlet extends HttpServlet {
 				pw.println("</ul>");
 				return;  //block control going further
 			}
-		}
-		else
+		//}
+		//else
 			age=Integer.parseInt(tage);
 		//Write b.logic (request processing logic)
 		if(age<18)
@@ -80,21 +80,21 @@ public class VaccineEligibilityCheckServlet extends HttpServlet {
 		pw.close();
 	}//doPost(-,-);
 
-	@Override
+	/*@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
+	
 		System.out.println("VaccineEligibilityCheckServlet.doGet(-,-)");
-
+	
 		//Get PrintWriter 
 		PrintWriter pw = res.getWriter();
-
+	
 		//Set response content type
 		res.setContentType("text/html");
-
+	
 		//get System date and time
 		LocalDateTime ldt = LocalDateTime.now();
 		int hour=ldt.getHour();
-
+	
 		if(hour<12)
 			pw.println("<h1 style='color:orange;text-align:center'>Good Morning</h1>");
 		else if(hour<16)
@@ -103,9 +103,9 @@ public class VaccineEligibilityCheckServlet extends HttpServlet {
 			pw.println("<h1 style='color:blue;text-align:center'>Good Evening</h1>");
 		else
 			pw.println("<h1 style='color:Grey;text-align:center'>Good Night</h1>");
-
+	
 		//Close Stream
 		pw.close();
-
+	
 	}//doGet(-,-);
-}//class
+	*/}//class
