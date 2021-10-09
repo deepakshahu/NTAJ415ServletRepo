@@ -1,0 +1,3 @@
+create sequence cust_cno start with 1 increment by 1 minvalue 1 maxvalue 10000 cache 20 noorder nocycle;
+
+create table servlet_customer(cno int not null, cname varchar2(255), cadd varchar2(255), billamt float, mobileno int);
