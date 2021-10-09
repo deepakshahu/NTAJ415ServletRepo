@@ -10,6 +10,7 @@
 	<servlet>
 		<servlet-name>emp</servlet-name>
 		<servlet-class>com.nit.servlet.EmployeeSearchServlet</servlet-class>
+		
 		<init-param>
 			<param-name>driverClass</param-name>
 			<param-value>oracle.jdbc.driver.OracleDriver</param-value>
