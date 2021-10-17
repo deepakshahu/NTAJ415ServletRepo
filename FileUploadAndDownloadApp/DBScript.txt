@@ -1,0 +1,2 @@
+create table upload_employee(eid int, ename varchar2(20), eadd varchar2(20), resume_path varchar2(255), photo_path varchar2(255));
+
