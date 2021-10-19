@@ -66,8 +66,8 @@ public class EmployeeRegistrationServlet extends HttpServlet{
 			//Set values to query params
 			ps.setString(1, name);
 			ps.setString(2, addrs);
-			ps.setString(3, fileList.get(0));
-			ps.setString(4, fileList.get(1));
+			ps.setString(3, fileList.get(1));
+			ps.setString(4, fileList.get(0));
 			//Execute the query
 			int count = ps.executeUpdate();
 			if(count==1)
@@ -99,7 +99,7 @@ public class EmployeeRegistrationServlet extends HttpServlet{
 		}//finally
 
 		//Add home hyperlink
-		pw.println("<h1 style='text-align:center'><a href='employee_register.html'>Home</a></h1>");
+		pw.println("<h1 style='text-align:center'><a href='index.html'>Home</a></h1>");
 
 		//Close stream
 		pw.close();
