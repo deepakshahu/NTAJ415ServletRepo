@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Marriage Application</title>
+<style>
+.img-container {
+	text-align: center;
+}
+</style>
+</head>
+<body bgcolor="green">
+	<h1 style='color: red; text-align: center'>Shaddi.com</h1>
+	<div class="img-container">
+		<img src="images/marriage.jpg">
+	</div>
+	<form action="marriageurl" method="POST"
+		onsubmit="return validate(this)">
+		<table border="1" bgcolor="aqua" align="center">
+			<caption>Person Details</caption>
+			<tr>
+				<td>&nbsp;Person Name :</td>
+				<td><input type="text" name="pname"><span id="pnameErr"
+					style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Person Age :</td>
+				<td><input type="text" name="page"><span id="pageErr"
+					style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Person Gender :</td>
+				<td><input type="radio" name="pgender" id="Male" value="M">Male</td>
+				<td><input type="radio" name="pgender" id="Female" value="F">Female</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Check Marriage Eligibility"></td>
+				<td><input type="reset" value="cancel"></td>
+			</tr>
+		</table>
+		<input type="hidden" name="vflag" value="no"/>
+	</form>
+</body>
+</html>
+<script language="JavaScript" src="js/validations.js"></script>
