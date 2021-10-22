@@ -28,6 +28,10 @@ public class EmployeeSearchServlet extends HttpServlet{
 
 			//Set response content type
 			res.setContentType("text/html");
+			
+			//Include Header Content
+			RequestDispatcher rd1 = req.getRequestDispatcher("/headurl");
+			rd1.include(req, res);
 
 			//Get access to ServletConfig Object
 			ServletConfig cg = getServletConfig();
@@ -68,10 +72,16 @@ public class EmployeeSearchServlet extends HttpServlet{
 					}//if
 					pw.println("<br><br><p style='text-align:center'><a href='search.html'>Home</a>");
 
-					//Close Stream
-					pw.close();
+					//Do not Close Stream
+					//pw.close();
 				}//try3
 			}//try2
+			
+			//Include Footer Content
+			RequestDispatcher rd2 = req.getRequestDispatcher("/footer.html");
+			rd2.include(req, res);
+			//Close Stream
+			pw.close();
 		}//try1
 		catch(Exception e) {
 			e.printStackTrace();
@@ -80,11 +90,11 @@ public class EmployeeSearchServlet extends HttpServlet{
 			//RequestDispatcher rd = req.getRequestDispatcher("/errorurl");
 			/*ServletContext sc = getServletContext();
 			RequestDispatcher rd = sc.getRequestDispatcher("/errorurl");*/
-			RequestDispatcher rd1 = req.getRequestDispatcher("/error.html");
-			rd1.forward(req, res);
-			ServletContext sc = getServletContext();
-			RequestDispatcher rd = sc.getNamedDispatcher("err");
+			RequestDispatcher rd = req.getRequestDispatcher("/errorurl");
 			rd.forward(req, res);
+			/*ServletContext sc = getServletContext();
+			RequestDispatcher rd = sc.getNamedDispatcher("err");
+			rd.forward(req, res);*/
 			
 			pw.println("<b>After rd.forward(-,-)</b>");
 			System.out.println("Main :: After rd.forward(-,-)");
