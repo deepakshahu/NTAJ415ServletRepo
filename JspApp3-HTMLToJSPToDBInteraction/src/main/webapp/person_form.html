@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Person Registration</title>
+</head>
+<body>
+	<h1 style="color: red; text-align: center">HTML to JSP to DB
+		Interaction</h1>
+
+	<form action="jspdburl" method="POST">
+		<table border="1" align="center" bgcolor="cyan">
+			<tr>
+				<td>Person Name: </td>
+				<td><input type="text" name="pname"></td>
+			</tr>
+			<tr>
+				<td>Person Age: </td>
+				<td><input type="range" min="1" max="125" name="page"></td>
+			</tr>
+			<tr>
+				<td>Person Address: </td>
+				<td><input type="text" name="paddrs"></td>
+			</tr>
+			<tr>
+				<td>Person Email id: </td>
+				<td><input type="email" name="mailid"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="register" name="p1"></td>
+				<td><input type="reset" value="Cancel"></td>
+			</tr>
+		</table>
+	</form>
+	<h2 style="color:red;text-align:center"><a href="jspdburl?p1=link1"> Get All Person Details</a></h2>	
+</body>
+</html>
